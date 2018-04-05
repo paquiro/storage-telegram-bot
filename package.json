@@ -7,13 +7,14 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "nodemon index",
+    "start:prod": "ENV=production node index",
+    "start:dev": "ENV=development nodemon index",
     "test": "test"
   },
   "author": "Francisco José Rodríguez Ramírez",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^5.0.1",
+    "config": "^1.30.0",
     "fs": "0.0.1-security",
     "request": "^2.85.0",
     "telegraf": "^3.20.0"
