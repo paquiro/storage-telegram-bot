@@ -1,0 +1,8 @@
+{
+  "telegram": {
+    "token": ""
+  },
+  "auth": {
+    "allowed": []
+  }
+}
