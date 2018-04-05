@@ -5,16 +5,16 @@ const fs = require("fs");
 const Telegraf = require("telegraf");
 const Markup = require("telegraf/markup");
 const Extra = require("telegraf/extra");
-const dotenv = require("dotenv").config({ path: ".env" });
+const config = require("config");
 
 const auth = require("./auth");
 
-if (!process.env.telegramBotToken) {
+if (!config.telegram.token) {
   console.log("Please enter a token");
   process.exit(0);
 }
 
-const bot = new Telegraf(process.env.telegramBotToken);
+const bot = new Telegraf(config.telegram.token);
 
 // Authorization
 bot.use((ctx, next) => {
@@ -39,7 +39,7 @@ bot.on("document", ctx => {
   bot.telegram.getFile(document.file_id).then(file => {
     request
       .get(
-        `https://api.telegram.org/file/botd${process.env.telegramBotToken}/${
+        `https://api.telegram.org/file/botd${config.telegram.token}/${
           file.file_path
         }`
       )
