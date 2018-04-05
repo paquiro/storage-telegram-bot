@@ -1,9 +1,6 @@
 "use strict";
 
-const request = require("request");
-const fs = require("fs");
 const Telegraf = require("telegraf");
-const Markup = require("telegraf/markup");
 const config = require("config");
 
 const doorman = require("./services/doorman");
