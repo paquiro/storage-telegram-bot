@@ -58,4 +58,5 @@ typings/
 config/development.json
 config/production.json
 
-
+# editor files
+.vscode
