@@ -4,5 +4,8 @@
   },
   "auth": {
     "allowed": []
+  },
+  "storage": {
+    "basePath": ""
   }
 }
