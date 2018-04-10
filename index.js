@@ -16,6 +16,6 @@ bot.use(doorman);
 
 bot.on('photo', controllers.receivePhoto);
 
-bot.on('document', controllers.receiveDocument);
+bot.on('document', controllers.receiveDocument(bot));
 
 bot.startPolling();
