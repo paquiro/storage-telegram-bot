@@ -1,9 +1,3 @@
-const request = require('request');
-const fs = require('fs');
-const Telegraf = require('telegraf');
-const Extra = require('telegraf/extra');
-const config = require('config');
-
 const Telegraf = require('telegraf');
 const config = require('config');
 
